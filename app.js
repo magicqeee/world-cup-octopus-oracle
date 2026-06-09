@@ -198,6 +198,12 @@ function predict(match) {
   raceOctopus.className = "race-octopus thinking";
   void raceOctopus.offsetWidth;
 
+  if (window.matchMedia("(max-width: 900px)").matches) {
+    window.requestAnimationFrame(() => {
+      document.querySelector("#oracle").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
   const winnerIsRight = Boolean(randomSide());
   predictionTimer = window.setTimeout(() => {
     const winner = winnerIsRight ? match.home : match.away;
@@ -208,7 +214,7 @@ function predict(match) {
       const winnerZh = winner.zhName || chineseNames[winner.name] || winner.name;
       const opponentZh = opponent.zhName || chineseNames[opponent.name] || opponent.name;
       winnerName.textContent = `${winnerZh} · ${winner.name}`;
-      resultLine.textContent = `触手已经决定：${winnerZh} 将在这场对阵中战胜 ${opponentZh}。`;
+      resultLine.textContent = `保罗已经预言：${winnerZh} 将在这场对阵中战胜 ${opponentZh}。`;
       resultBanner.hidden = false;
       launchCelebration(winnerIsRight ? "right" : "left");
     }, 1250);
