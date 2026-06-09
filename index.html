@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#071e3d" />
+    <title>章鱼保罗 2.0 · 2026 世界杯预测</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="sky-football" aria-hidden="true"></div>
+    <div class="cloud cloud-one" aria-hidden="true"></div>
+    <div class="cloud cloud-two" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#">
+        <span class="mini-octopus" aria-hidden="true">●</span>
+        <span>章鱼保罗 <b>2.0</b></span>
+      </a>
+      <div class="live-chip"><i></i><span id="sourceLabel">正在连接赛程...</span></div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="kicker">2026 WORLD CUP · PIXEL ORACLE</p>
+          <h1>让小章鱼<br /><em>选出赢家</em></h1>
+          <p class="intro">选择一场赛程中的对阵，保罗会爬向它心中的胜者。</p>
+          <a class="pixel-button coral" href="#fixtures">选择对阵 ↓</a>
+        </div>
+        <div class="hero-tank" aria-label="像素海洋足球场">
+          <span class="bubble b1"></span><span class="bubble b2"></span><span class="bubble b3"></span>
+          <div class="pixel-ball" aria-hidden="true"></div>
+          <div class="hero-octopus" aria-hidden="true">
+            <span class="sombrero"><b></b></span>
+            <span class="eye left"><b></b></span><span class="eye right"><b></b></span>
+            <i></i><i></i><i></i><i></i>
+          </div>
+          <div class="sea-floor"><i></i><i></i><i></i></div>
+        </div>
+      </section>
+
+      <section class="fixtures-section" id="fixtures">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">MATCH SCHEDULE</p>
+            <h2>选择一组对阵</h2>
+          </div>
+          <button class="pixel-button small" id="refreshButton" type="button">↻ 刷新赛程</button>
+        </div>
+
+        <div class="notice" id="notice" role="status">正在从公开赛程接口打捞对阵...</div>
+        <div class="schedule-workspace">
+          <div class="fixture-grid" id="fixtureGrid" aria-live="polite"></div>
+
+          <div class="oracle-section embedded" id="oracle">
+            <div class="section-heading compact">
+              <div>
+                <p class="kicker">PAUL'S PREDICTION</p>
+                <h2>章鱼预测池</h2>
+              </div>
+            </div>
+
+            <div class="oracle-card" id="oracleCard">
+              <div class="empty-oracle" id="emptyOracle">
+                <div class="idle-football" aria-hidden="true"></div>
+                <p>从左侧选择一组对阵</p>
+              </div>
+
+              <div class="prediction-stage" id="predictionStage" hidden>
+                <div class="country-side left-side">
+                  <img id="leftFlag" alt="" />
+                  <strong id="leftName"></strong>
+                </div>
+                <div class="race-track">
+                  <span class="track-line"></span>
+                  <div class="race-octopus" id="raceOctopus" aria-label="正在选择胜者">
+                    <span class="sombrero"><b></b></span>
+                    <span class="octo-eye e1"><b></b></span><span class="octo-eye e2"><b></b></span>
+                    <i></i><i></i><i></i><i></i>
+                  </div>
+                  <div class="pixel-ball tiny" aria-hidden="true"></div>
+                </div>
+                <div class="country-side right-side">
+                  <img id="rightFlag" alt="" />
+                  <strong id="rightName"></strong>
+                </div>
+              </div>
+
+              <div class="result-banner" id="resultBanner" hidden>
+                <span>保罗的触手指向</span>
+                <strong id="winnerName"></strong>
+                <p id="resultLine"></p>
+              </div>
+              <div class="celebration-layer" id="celebrationLayer" aria-hidden="true"></div>
+            </div>
+            <p class="disclaimer">仅供娱乐</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span class="footer-club"><i class="footer-football" aria-hidden="true"></i> PIXEL TROPICS FC</span>
+      <span>赛程数据：ESPN public scoreboard</span>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
